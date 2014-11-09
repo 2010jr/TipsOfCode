@@ -1,0 +1,9 @@
+■パーティション確認方法
+db2 select *  from syscat.datapartitions where tabname = 'XXXXXX'
+
+■パーティション追加方法
+db2 alter table XXXXXX ADD PARTITION starting '2014-01-01' ending '2014-01-31' 
+
+■パーティション削除方法
+db2 ALTER TABLE XXXXXX DETACH PART YYYYYY INTO junk
+db2 DROP TABLE junk
