@@ -1,0 +1,2 @@
+DB2の構成パラメータ確認コマンド
+db2 get db cfg for <データベース名> show detail
